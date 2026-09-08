@@ -29,8 +29,8 @@ export default function Portfolio() {
 
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="mailto:muhhaider906@gmail.com" className="project-link">✉ Email</a>
-              <a href="https://github.com" className="project-link" target="_blank" rel="noopener noreferrer">◈ GitHub</a>
-              <a href="https://linkedin.com" className="project-link" target="_blank" rel="noopener noreferrer">◉ LinkedIn</a>
+              <a href="https://github.com/Haiderlikecodes" className="project-link" target="_blank" rel="noopener noreferrer">◈ GitHub</a>
+              <a href="www.linkedin.com/in/muhammad-haider-697802290" className="project-link" target="_blank" rel="noopener noreferrer">◉ LinkedIn</a>
             </div>
           </div>
         </section>
