@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/Muhammad-Haider",
-  assetPrefix: "/Muhammad-Haider/",
+  basePath: "/Muhammad-Haider", // Do NOT include assetPrefix
   images: {
     unoptimized: true,
   },
