@@ -33,7 +33,7 @@ story = [
     Paragraph('Full-Stack &amp; AI Engineer <font color="#52616b" size="8">| Software Development Company | 4+ years</font>', entry_style),
     Paragraph('&bull; Built full-stack web applications with Next.js and React frontends connected to Django REST APIs.<br/>&bull; Designed intelligent chatbot workflows using RAG, fine-tuned language models, and ChromaDB for context-aware responses.<br/>&bull; Developed responsive UI components and integrated streaming chat experiences.', small_style),
     Spacer(1, 2),
-    Paragraph('Junior Pentester <font color="#52616b" size="8">| Zeroxinnovation | 2024 - 2026</font>', entry_style),
+    Paragraph('Junior Pentester <font color="#52616b" size="8">| Zeroxinnovation</font>', entry_style),
     Paragraph('&bull; Conducted web application, network, and API penetration testing aligned with OWASP Top 10 and NIST practices.<br/>&bull; Identified SQL injection, XSS, and configuration vulnerabilities and collaborated on secure coding fixes.<br/>&bull; Used Burp Suite, Nmap, Metasploit, Wireshark, Python, and Bash for security assessments and automation.', small_style),
     Paragraph('SELECTED WORK', section_style),
     Paragraph('<b>Intelligent RAG Chatbot</b><br/>Privacy-first assistant combining a fine-tuned language model with ChromaDB retrieval to provide grounded, context-aware responses.', small_style),
