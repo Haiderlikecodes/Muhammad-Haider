@@ -11,13 +11,37 @@
   --color-card-bg: #111827;
 }
 
+:root {
+  --bg-primary: #0a0d12;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --accent-teal: #2dd4bf;
+  --border-subtle: #1f2937;
+}
+
 /* Replaces @layer base */
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
     margin: 0;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: var(--font-space-mono), "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    background-image: linear-gradient(rgba(45, 212, 191, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(45, 212, 191, 0.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  ::selection {
+    background: rgba(45, 212, 191, 0.25);
+    color: var(--color-text-primary);
   }
 }
 
@@ -110,6 +134,50 @@
   border-radius: 0.5rem;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card-compact {
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+}
+
+.project-card-compact .project-link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  color: var(--color-text-primary);
+  font-size: 1.15rem;
+  margin: 0 0 0.6rem;
+}
+
+.project-description {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.project-tech {
+  color: var(--color-accent-teal);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .project-link {
   color: var(--color-accent-teal);
   text-decoration: none;
@@ -199,4 +267,53 @@
 .contact-label {
   color: var(--color-text-muted);
   font-size: 0.8rem;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 700ms ease both;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 700ms ease both;
+}
+
+.animate-delay-1 { animation-delay: 100ms; }
+.animate-delay-2 { animation-delay: 180ms; }
+.animate-delay-3 { animation-delay: 260ms; }
+.animate-delay-4 { animation-delay: 340ms; }
+
+@media (max-width: 760px) {
+  .page-container {
+    padding: 0 1rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-period {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-in,
+  .animate-fade-in-up {
+    animation: none;
+  }
 }

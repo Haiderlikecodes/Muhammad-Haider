@@ -6,9 +6,9 @@ export default function Portfolio() {
       <div className="content-wrapper" style={{ position: 'relative', zIndex: 1 }}>
 
         {/* --- HERO SECTION --- */}
-        <section style={{ padding: '6rem 0 5rem' }}>
+        <section className="animate-fade-in" style={{ padding: '6rem 0 5rem' }}>
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <a href="cv.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <span className="badge badge-featured">
                 <span className="badge-dot"></span>Download CV
               </span>
@@ -23,25 +23,30 @@ export default function Portfolio() {
             </p>
 
             <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 2rem', lineHeight: 1.8 }}>
-              Software engineer building modern web applications and local AI integrations.
-              Experienced in Next.js, Django REST framework, and deploying private local LLM chatbot workflows.
+              Full-stack and AI engineer with 4+ years of experience building modern web applications
+              and intelligent assistants with fine-tuned models, RAG, and ChromaDB.
             </p>
 
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="mailto:muhhaider906@gmail.com" className="project-link">✉ Email</a>
               <a href="https://github.com/Haiderlikecodes" className="project-link" target="_blank" rel="noopener noreferrer">◈ GitHub</a>
-              <a href="www.linkedin.com/in/muhammad-haider-697802290" className="project-link" target="_blank" rel="noopener noreferrer">◉ LinkedIn</a>
+              <a href="https://www.linkedin.com/in/muhammad-haider-697802290" className="project-link" target="_blank" rel="noopener noreferrer">◉ LinkedIn</a>
             </div>
           </div>
         </section>
 
         {/* --- HIGHLIGHT CARDS --- */}
-        <section style={{ paddingBottom: '5rem' }}>
+        <section className="animate-fade-in-up animate-delay-1" style={{ paddingBottom: '5rem' }}>
           <div className="feature-grid">
             <div className="feature-card">
               <div className="feature-icon">◇</div>
               <h3 className="feature-title">Full-Stack Dev</h3>
               <p className="feature-description">Building responsive UIs and robust REST APIs with Next.js & Django</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">✳</div>
+              <h3 className="feature-title">Fine-Tuning & RAG</h3>
+              <p className="feature-description">Creating grounded AI assistants with fine-tuned models, retrieval, and ChromaDB</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">◈</div>
@@ -62,7 +67,7 @@ export default function Portfolio() {
         </section>
 
         {/* --- FEATURED PROJECT --- */}
-        <section style={{ paddingBottom: '5rem' }}>
+        <section className="animate-fade-in-up animate-delay-2" style={{ paddingBottom: '5rem' }}>
           <h2 className="section-header" data-icon="├─">
             Featured Project<span className="section-header-line"></span>
           </h2>
@@ -74,18 +79,18 @@ export default function Portfolio() {
                 <span className="badge"><span className="badge-dot"></span>AI Solution</span>
               </div>
               <h3 style={{ fontSize: '1.5rem', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
-                Local LLM Chatbot Integration
+                Intelligent RAG Chatbot
               </h3>
               <p style={{ color: 'var(--accent-teal)', marginBottom: '1rem', fontSize: '0.95rem' }}>
-                Privacy-first AI chatbot powered by locally hosted language models
+                A privacy-first assistant combining retrieval-augmented generation and fine-tuned language models
               </p>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '0.9rem', lineHeight: 1.6 }}>
-                Developed a full-stack interface and streaming pipeline to interface directly with locally executed open-source LLMs, ensuring zero external data leakage and zero API subscription dependency.
+                Building an intelligent chatbot that retrieves relevant knowledge from a ChromaDB vector store and uses a fine-tuned model to deliver more relevant, context-aware responses.
               </p>
               <ul className="project-highlights">
-                <li>Local execution pipeline with zero external API calls or third-party data latency</li>
-                <li>Next.js dynamic frontend paired with a fast Django backend endpoint</li>
-                <li>Custom prompt templating and streaming chat UI</li>
+                <li>RAG pipeline retrieves relevant context from ChromaDB</li>
+                <li>Fine-tuned language model for domain-specific conversations</li>
+                <li>Next.js interface with Django REST APIs and streaming chat</li>
               </ul>
             </div>
 
@@ -100,7 +105,7 @@ export default function Portfolio() {
                 </div>
                 <div style={{ marginBottom: '1rem' }}>
                   <span style={{ color: 'var(--accent-teal)', fontWeight: 600 }}>Backend & Model</span>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: '0.25rem 0 0' }}>Django REST Framework & locally executed LLM runtime</p>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: '0.25rem 0 0' }}>Django REST Framework, ChromaDB retrieval, and fine-tuned LLMs</p>
                 </div>
               </div>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
@@ -111,29 +116,79 @@ export default function Portfolio() {
                 <span className="skill-tag">Django</span>
                 <span className="skill-tag">Python</span>
                 <span className="skill-tag">Local LLMs</span>
+                <span className="skill-tag">RAG</span>
+                <span className="skill-tag">Fine-Tuning</span>
+                <span className="skill-tag">ChromaDB</span>
                 <span className="skill-tag">Tailwind</span>
               </div>
             </div>
           </div>
         </section>
 
+        {/* --- PROJECTS SECTION --- */}
+        <section className="animate-fade-in-up animate-delay-3" style={{ paddingBottom: '5rem' }}>
+          <h2 className="section-header" data-icon="├─">
+            Projects<span className="section-header-line"></span>
+          </h2>
+
+          <div className="project-grid">
+            <article className="project-card project-card-compact">
+              <div className="project-badges">
+                <span className="badge badge-featured"><span className="badge-dot"></span>AI Solution</span>
+              </div>
+              <h3 className="project-title">Intelligent RAG Chatbot</h3>
+              <p className="project-description">An intelligent assistant combining fine-tuned language models with ChromaDB retrieval to ground responses in relevant knowledge.</p>
+              <p className="project-tech">Next.js · Django · Fine-Tuning · RAG · ChromaDB</p>
+              <a href="https://github.com/Haiderlikecodes" className="project-link" target="_blank" rel="noopener noreferrer">→ View on GitHub</a>
+            </article>
+
+            <article className="project-card project-card-compact">
+              <div className="project-badges">
+                <span className="badge badge-featured"><span className="badge-dot"></span>Currently Working</span>
+              </div>
+              <h3 className="project-title">Flight & Travel Booking Platform</h3>
+              <p className="project-description">Building a full-stack booking experience for finding and booking flights, with an intelligent chatbot that uses RAG and fine-tuned models to assist travelers.</p>
+              <p className="project-tech">Next.js · Django · RAG · Fine-Tuning · ChromaDB</p>
+            </article>
+
+            <article className="project-card project-card-compact">
+              <div className="project-badges">
+                <span className="badge"><span className="badge-dot"></span>Security</span>
+              </div>
+              <h3 className="project-title">Web Security Assessments</h3>
+              <p className="project-description">Application, network, and API security testing aligned with OWASP Top 10 and NIST practices.</p>
+              <p className="project-tech">Burp Suite · Nmap · Metasploit · Wireshark · Python</p>
+              <a href="mailto:muhhaider906@gmail.com" className="project-link">→ Discuss a project</a>
+            </article>
+
+            <article className="project-card project-card-compact">
+              <div className="project-badges">
+                <span className="badge"><span className="badge-dot"></span>Full-Stack</span>
+              </div>
+              <h3 className="project-title">Django + Next.js Platforms</h3>
+              <p className="project-description">Responsive products backed by robust REST APIs, secure authentication, and maintainable service architecture.</p>
+              <p className="project-tech">Next.js · React · Django REST · SQL · REST APIs</p>
+              <a href="https://github.com/Haiderlikecodes" className="project-link" target="_blank" rel="noopener noreferrer">→ Explore my work</a>
+            </article>
+          </div>
+        </section>
+
         {/* --- EXPERIENCE SECTION --- */}
-        <section style={{ paddingBottom: '5rem' }}>
+        <section className="animate-fade-in-up animate-delay-4" style={{ paddingBottom: '5rem' }}>
           <h2 className="section-header" data-icon="→">
             Experience<span className="section-header-line"></span>
           </h2>
 
           <div className="timeline">
-            {/* Recent Internship */}
             <div className="timeline-item">
               <div className="timeline-header">
                 <span className="timeline-company">Software Development Company</span>
-                <span className="timeline-role">Full-Stack & AI Engineering Intern</span>
-                <span className="timeline-period">Recent (3 Months)</span>
+                <span className="timeline-role">Full-Stack & AI Engineer</span>
+                <span className="timeline-period">4+ Years Experience</span>
               </div>
               <ul className="timeline-highlights">
                 <li>Built full-stack web applications and API endpoints using Django backends and Next.js frontends.</li>
-                <li>Designed and integrated custom chatbot workflows using locally run LLMs for low-latency responses and complete data privacy.</li>
+                <li>Designed intelligent chatbot workflows using RAG, fine-tuned LLMs, and ChromaDB for context-aware responses.</li>
                 <li>Developed interactive, modern UI components with React and Tailwind CSS.</li>
               </ul>
             </div>
@@ -156,7 +211,7 @@ export default function Portfolio() {
         </section>
 
         {/* --- SKILLS SECTION --- */}
-        <section style={{ paddingBottom: '5rem' }}>
+        <section className="animate-fade-in-up" style={{ paddingBottom: '5rem' }}>
           <h2 className="section-header" data-icon="◇">
             Technical Skills<span className="section-header-line"></span>
           </h2>
@@ -178,6 +233,9 @@ export default function Portfolio() {
                 <span className="skill-tag">Django</span>
                 <span className="skill-tag">Python</span>
                 <span className="skill-tag">Local LLMs</span>
+                <span className="skill-tag">Fine-Tuning</span>
+                <span className="skill-tag">RAG</span>
+                <span className="skill-tag">ChromaDB</span>
                 <span className="skill-tag">Node.js</span>
                 <span className="skill-tag">SQL</span>
                 <span className="skill-tag">C++</span>
@@ -198,7 +256,7 @@ export default function Portfolio() {
         </section>
 
         {/* --- EDUCATION --- */}
-        <section style={{ paddingBottom: '6rem' }}>
+        <section className="animate-fade-in-up" style={{ paddingBottom: '6rem' }}>
           <h2 className="section-header" data-icon="◎">
             Education<span className="section-header-line"></span>
           </h2>
